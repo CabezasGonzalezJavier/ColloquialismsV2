@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center" />
 
-        <com.thedeveloperworldisyours.colloquialisms.views.CustomTextView
+        <com.lumbralessoftware.colloquialisms.views.CustomTextView
             android:id="@+id/fragment_review_es"
             style="@style/TextNormalStyle"
             android:layout_width="wrap_content"

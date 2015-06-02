@@ -1,11 +1,24 @@
 package com.lumbralessoftware.colloquialisms.utils;
 
+import android.app.Activity;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+
 import java.util.Random;
 
 /**
  * Created by javiergonzalezcabezas on 25/5/15.
  */
 public class Utils {
+
+    public static boolean isOnline(Activity activity) {
+        ConnectivityManager cm =
+                (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
+    }
+
     public static int randInt(int min, int max) {
 
         // NOTE: Usually this should be a field rather than a method

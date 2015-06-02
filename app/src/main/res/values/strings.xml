@@ -19,6 +19,6 @@
     <string name="action_our_apps">Our Apps</string>
     <string name="action_about_us">About us</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="no_connection">Error connection. You must check your connection</string>
 
 </resources>
