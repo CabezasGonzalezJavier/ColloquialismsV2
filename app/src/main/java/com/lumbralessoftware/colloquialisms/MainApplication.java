@@ -21,8 +21,6 @@ public class MainApplication extends Application {
         if (SimpleDatabaseUtil.isFirstApplicationStart(this)) {
             SQLiteSimple databaseSimple = new SQLiteSimple(this, Constants.DATABASE_NAME);
 //            databaseSimple.rawQuery("CREATE  TABLE "main"."Sentence" ("_id" VARCHAR PRIMARY KEY NOT NULL , "sentence_origin" VARCHAR NOT NULL , "sentence_destination" VARCHAR NOT NULL , "language_origin" VARCHAR NOT NULL, "language_destination" VARCHAR NOT NULL )");
-//            databaseSimple.rawQuery("INSERT INTO table_name (_id,sentenceENG,sentenceENG,language)\n" +
-//                    "VALUES ('1','HELLO','HOLA','ES');");
         }
 
     }
