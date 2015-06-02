@@ -38,6 +38,7 @@ public class TestDestinationFragment extends Fragment implements TextView.OnEdit
     private static List<Sentence> mSentenceList;
     private SentenceDAO mSentenceDAO;
     private int mPosition;
+    private EditText mEditText;
 
     public static TestDestinationFragment newInstance(int sectionNumber) {
         TestDestinationFragment fragment = new TestDestinationFragment();
@@ -62,9 +63,9 @@ public class TestDestinationFragment extends Fragment implements TextView.OnEdit
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_test_destination, container, false);
         mSentenceDestino = (TextView) view.findViewById(R.id.fragment_test_destionation_textView);
-        EditText editText = (EditText) view.findViewById(R.id.fragment_test_destination_editText);
-        editText.setImeOptions(EditorInfo.IME_ACTION_DONE);
-        editText.setOnEditorActionListener(this);
+        mEditText = (EditText) view.findViewById(R.id.fragment_test_destination_editText);
+        mEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        mEditText.setOnEditorActionListener(this);
         getData();
         return view;
     }
@@ -117,6 +118,7 @@ public class TestDestinationFragment extends Fragment implements TextView.OnEdit
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         showSentence();
+                        mEditText.setText("");
                         dialog.cancel();
                     }
                 }

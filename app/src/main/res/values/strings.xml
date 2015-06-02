@@ -20,5 +20,13 @@
     <string name="action_about_us">About us</string>
 
     <string name="no_connection">Error connection. You must check your connection</string>
+    <string name="error_retrofit">There are problems for to get data from internet</string>
+    <string name="title_activity_add_sentence">AddSentenceActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="activity_add_sentence_origin">Enter sentence in english</string>
+    <string name="activity_add_sentence_destination">Enter sentence in spanish</string>
+    <string name="activity_add_sentence_review">Your sentence will be reviewed.&#xA; Thank you very much for this contribution.</string>
+    <string name="activity_add_sentence_title_review">From Lumbrales Software</string>
 
 </resources>

@@ -38,6 +38,7 @@ public class TestOriginFragment extends Fragment implements TextView.OnEditorAct
     private static List<Sentence> mSentenceList;
     private SentenceDAO mSentenceDAO;
     private int mPosition;
+    private EditText mEditText;
 
     public static TestOriginFragment newInstance(int sectionNumber) {
         TestOriginFragment fragment = new TestOriginFragment();
@@ -62,9 +63,9 @@ public class TestOriginFragment extends Fragment implements TextView.OnEditorAct
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_test_origin, container, false);
         mSentenceOrigin = (TextView) view.findViewById(R.id.fragment_test_origin_textView);
-        EditText editText = (EditText) view.findViewById(R.id.fragment_test_origin_editText);
-        editText.setImeOptions(EditorInfo.IME_ACTION_DONE);
-        editText.setOnEditorActionListener(this);
+        mEditText = (EditText) view.findViewById(R.id.fragment_test_origin_editText);
+        mEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        mEditText.setOnEditorActionListener(this);
         getData();
         return view;
     }
@@ -123,6 +124,7 @@ public class TestOriginFragment extends Fragment implements TextView.OnEditorAct
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         showSentence();
+                        mEditText.setText("");
                         dialog.cancel();
                     }
                 }

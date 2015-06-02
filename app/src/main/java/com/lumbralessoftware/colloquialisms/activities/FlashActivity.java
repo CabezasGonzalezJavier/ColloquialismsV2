@@ -1,6 +1,5 @@
 package com.lumbralessoftware.colloquialisms.activities;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -24,15 +23,14 @@ public class FlashActivity extends ActionBarActivity {
 
     private SentenceDAO mSentenceDAO;
     private List<Sentence> mSentenceList;
-    private ProgressDialog mProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flash);
 
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.backgroundactionbarr));
         mSentenceDAO = new SentenceDAO(this);
-        mProgress = new ProgressDialog(this,R.style.Transparent);
 
         getData();
     }
@@ -63,12 +61,10 @@ public class FlashActivity extends ActionBarActivity {
 
     public void insertDataBase(){
         mSentenceDAO.createAll(mSentenceList);
-        mProgress.cancel();
         gotActivity();
     }
 
     public void getSentences(){
-        mProgress.show();
         Callback<List<Sentence>> callback = new Callback<List<Sentence>>() {
             @Override
             public void success(List<Sentence> sentences, Response response) {
@@ -79,8 +75,9 @@ public class FlashActivity extends ActionBarActivity {
 
             @Override
             public void failure(RetrofitError error) {
-                mProgress.cancel();
-                Log.v("Client", "failure");
+                Toast.makeText(FlashActivity.this,getString(R.string.error_retrofit),Toast.LENGTH_LONG).show();
+                mSentenceList=mSentenceDAO.readAllAsc();
+                gotActivity();
             }
         };
         Client.initRestAdapter().getSentences(Constants.LANGUAJE_ORIGIN,Constants.LANGUAJE_DESTINATION,callback);

@@ -7,8 +7,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.lumbralessoftware.colloquialisms.R;
 import com.lumbralessoftware.colloquialisms.fragments.ListFragment;
@@ -20,7 +25,6 @@ import com.lumbralessoftware.colloquialisms.utils.Constants;
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
-
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -37,6 +41,8 @@ public class MainActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.backgroundactionbarr));
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -78,22 +84,8 @@ public class MainActivity extends ActionBarActivity
 
     }
 
-
     public void onSectionAttached(int number) {
-        switch (number) {
-            case 1:
-                mTitle = getString(R.string.title_section1);
-                break;
-            case 2:
-                mTitle = getString(R.string.title_section2);
-                break;
-            case 3:
-                mTitle = getString(R.string.title_section3);
-                break;
-            case 4:
-                mTitle = getString(R.string.title_section4);
-                break;
-        }
+        mTitle="";
     }
 
     public void restoreActionBar() {
@@ -114,7 +106,7 @@ public class MainActivity extends ActionBarActivity
             restoreActionBar();
             return true;
         }
-        return super.onCreateOptionsMenu(menu);
+        return false;//super.onCreateOptionsMenu(menu);
     }
 
     @Override
