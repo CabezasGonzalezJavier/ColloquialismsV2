@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".TheDeveloperWorldIsYoursActivity" >
+    tools:context=".TheDeveloperWorldIsYoursActivity">
+
     <LinearLayout
         android:id="@+id/fragment_test_destination_linearLayout"
         android:layout_width="match_parent"
@@ -18,19 +19,20 @@
 
         <com.lumbralessoftware.colloquialisms.views.CustomTextView
             android:id="@+id/fragment_test_destionation_textView"
-            style="@style/TextNormalStyle"
+            style="@style/TextTitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center" />
 
         <EditText
+            android:id="@+id/fragment_test_destination_editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/fragment_test_destination_editText"
             android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/activity_vertical_margin"
             android:hint="@string/fragment_test_eng_hint"
-            android:singleLine="true"
-            android:imeOptions="actionDone"/>
+            android:imeOptions="actionDone"
+            android:singleLine="true" />
 
     </LinearLayout>
 </RelativeLayout>

@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.lumbralessoftware.colloquialisms.R;
+import com.lumbralessoftware.colloquialisms.fragments.AddSentenceFragment;
 import com.lumbralessoftware.colloquialisms.fragments.ListFragment;
 import com.lumbralessoftware.colloquialisms.fragments.NavigationDrawerFragment;
 import com.lumbralessoftware.colloquialisms.fragments.ReviewFragment;
@@ -78,6 +79,11 @@ public class MainActivity extends ActionBarActivity
             case 4:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, TestDestinationFragment.newInstance(position + 1))
+                        .commit();
+                break;
+            case 5:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, AddSentenceFragment.newInstance(position + 1))
                         .commit();
                 break;
         }

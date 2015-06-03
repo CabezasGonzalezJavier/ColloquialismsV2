@@ -5,6 +5,7 @@
     <string name="title_section2">Review</string>
     <string name="title_section3">Test Eng/Spa</string>
     <string name="title_section4">Test Spa/Eng</string>
+    <string name="title_section5">Add sentence</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -21,6 +22,7 @@
 
     <string name="no_connection">Error connection. You must check your connection</string>
     <string name="error_retrofit">There are problems for to get data from internet</string>
+    <string name="empty_field">Empty field</string>
     <string name="title_activity_add_sentence">AddSentenceActivity</string>
 
     <string name="hello_world">Hello world!</string>
@@ -28,5 +30,9 @@
     <string name="activity_add_sentence_destination">Enter sentence in spanish</string>
     <string name="activity_add_sentence_review">Your sentence will be reviewed.&#xA; Thank you very much for this contribution.</string>
     <string name="activity_add_sentence_title_review">From Lumbrales Software</string>
+    <string name="activity_add_sentence_button">Send</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

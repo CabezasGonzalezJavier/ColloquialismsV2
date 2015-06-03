@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TheDeveloperWorldIsYoursActivity">
+
+    <LinearLayout
+        android:id="@+id/fragment_add_sentence_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.lumbralessoftware.colloquialisms.views.CustomTextView
+            android:id="@+id/fragment_add_sentence_title"
+            style="@style/TextTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/title_section5" />
+
+        <EditText
+            android:id="@+id/fragment_add_sentence_editText_origin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/activity_add_sentence_origin"
+            android:imeOptions="actionNext"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/fragment_add_sentence_editText_destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/activity_add_sentence_destination"
+            android:imeOptions="actionDone"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:singleLine="true" />
+
+        <ProgressBar
+            android:id="@+id/fragment_add_sentence_progress_bar"
+            style="@style/Transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible" />
+
+        <com.lumbralessoftware.colloquialisms.views.CustomTextView
+            android:id="@+id/fragment_add_sentence_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_button"
+            android:text="@string/activity_add_sentence_button"
+            android:padding="7dp"
+            style="@style/TextTitleStyle"
+            android:gravity="center"
+            android:textColor="@color/bg_tab_text_color"/>
+
+    </LinearLayout>
+</RelativeLayout>
