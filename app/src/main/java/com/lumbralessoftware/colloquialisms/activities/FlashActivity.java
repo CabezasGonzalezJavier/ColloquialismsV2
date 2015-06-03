@@ -29,6 +29,7 @@ public class FlashActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flash);
 
+        getSupportActionBar().setTitle("");
         getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.backgroundactionbarr));
         mSentenceDAO = new SentenceDAO(this);
 
